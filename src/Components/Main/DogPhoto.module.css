@@ -1,0 +1,18 @@
+.dogPhoto {
+  position: absolute;
+  top: 0;
+  left: 40%;
+  width: 815px;
+  z-index: 800;
+  height: 700px;
+}
+
+.img {
+  width: 100%;
+}
+
+@media (max-width: 1060px) {
+  .dogPhoto {
+    display: none;
+  }
+}

@@ -1,0 +1,154 @@
+.header {
+  display: flex;
+  padding: 1.1rem;
+  z-index: 1001;
+  padding-left: 4rem;
+}
+
+.nav {
+  width: 70%;
+  height: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav a {
+  position: relative;
+  font-size: 1.2rem;
+  color: black;
+  font-weight: bold;
+  align-items: center;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 2.2rem;
+  margin: 0.5rem 1rem;
+  text-decoration-line: none;
+}
+
+.nav ul li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: all 0.2s ease-out;
+  background-color: #2a02f0;
+}
+
+.nav ul li a:hover::before {
+  transform: scaleX(1);
+}
+
+.img {
+  width: 192px;
+  height: 192px;
+  border-radius: 50%;
+  background: #eff;
+}
+
+.hamPosition {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .img {
+    width: 120px;
+    height: 120px;
+  }
+  .nav {
+    display: none;
+  }
+
+  .hamPosition {
+    display: block;
+    position: absolute;
+    right: 2rem;
+    margin-top: 0.8rem;
+    cursor: pointer;
+    transition: all 0.4s linear;
+  }
+
+  .navBurguerClosed {
+    position: relative;
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    transition: all 0.4s ease-out;
+  }
+  .navBurguerClosed::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -8px;
+    background-color: #333;
+    transition: 0.4s;
+  }
+  .navBurguerClosed::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 8px;
+    background-color: #333;
+    transition: 0.4s;
+  }
+
+  .navBurguerOpen {
+    position: relative;
+    left: 16rem;
+    top: -20rem;
+    width: 40px;
+    height: 5px;
+    background-color: #333;
+    transition: 0.4s;
+    transform: rotate(-45deg) translate(-8px, 4px);
+    cursor: pointer;
+  }
+
+  .navBurguerOpen::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    background-color: #333;
+    transform: rotate(90deg) translate(1px, 0px);
+  }
+  .navOpened {
+    position: absolute;
+    top: 0;
+    right: 4rem;
+    width: 15rem;
+    height: 20rem;
+    border-radius: 20px;
+    transition: all 0.4s ease-out;
+    background-color: #0f92f0;
+    cursor: default;
+  }
+
+  .navStyle {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    line-height: 4rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  .navStyle a {
+    color: black;
+  }
+}
+
+@media (max-width: 440px) {
+  .header {
+    padding-left: 0.4rem;
+  }
+}

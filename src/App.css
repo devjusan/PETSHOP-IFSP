@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@400;500;700&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Atma', cursive;
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+main {
+  height: 38rem;
+  padding-left: 4rem;
+  grid-area: 'main';
+  font-family: 'Roboto', sans-serif;
+}
+
+main::after {
+  content: '';
+  display: block;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1 1 360px;
+}
+
+@media (max-width: 440px) {
+  main {
+    padding-left: 0.4rem;
+  }
+  html {
+    max-width: 100%;
+  }
+}
