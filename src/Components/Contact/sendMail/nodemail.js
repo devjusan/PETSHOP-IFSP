@@ -6,7 +6,7 @@ module.exports = (email, name, msg, anexo) => {
     port: 587,
     auth: {
       user: 'postmaster@sandbox7b24a1a7ef2d4b669f71bdf7db02898c.mailgun.org',
-      pass: '624cd31908d244ccf32353ff27265f08-3d0809fb-9b53bd94',
+      pass: 'xxxxxxxxxx',
     },
   });
 
