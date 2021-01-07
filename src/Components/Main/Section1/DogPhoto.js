@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './DogPhoto.module.css';
-import happyDog from '../../Assets/happyDog2.jpg';
+import happyDog from '../../../Assets/happyDog2.jpg';
 
 const DogPhoto = () => {
   return (

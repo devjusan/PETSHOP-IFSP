@@ -1,0 +1,30 @@
+.separator {
+  height: 100%;
+  width: 2px;
+  align-self: center;
+  background-color: black;
+  transform: translateX(1);
+}
+
+.choiceText {
+  align-self: center;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: 'Atma', cursive;
+  font-weight: 700;
+  color: #444;
+}
+
+.aChoice {
+  display: grid;
+  max-width: inherit;
+  grid-template-columns: 90px 15px 340px;
+  gap: 2rem 0;
+  margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .aChoice {
+    grid-template-columns: 90px 15px 160px;
+  }
+}

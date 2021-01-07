@@ -8,8 +8,11 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <div>
-        <img className={styles.img} src={Dog} alt="Imagem no cabeçalho." />
+      <div className={styles.img}>
+        <a href="/">
+          <img src={Dog} alt="Imagem no cabeçalho." />
+          <span className={styles.name}>IFSPet</span>
+        </a>
       </div>
       <nav className={styles.nav}>
         <ul>

@@ -4,8 +4,8 @@ import DogSlideShow from './DogSlideShow';
 
 const DogPhotoContent = () => {
   return (
-    <div className={styles.dogPhotoContent}>
-      <div className={styles.text}>
+    <section className={styles.dogPhotoContent}>
+      <div className="text">
         <h1>
           <strong>
             Tudo o que o seu cão <br /> precisa
@@ -13,12 +13,12 @@ const DogPhotoContent = () => {
           você <br />
           encontra aqui!
         </h1>
-        <p className={styles.textP}>CUIDADO. CARINHO. DIVERSÃO.</p>
+        <p className="textP">CUIDADO. CARINHO. DIVERSÃO.</p>
         <div>
           <DogSlideShow />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,0 +1,15 @@
+.dogPhoto2 {
+  width: 815px;
+  z-index: 800;
+  margin-left: -4rem;
+}
+
+.img2 {
+  width: 100%;
+}
+
+@media (max-width: 1060px) {
+  .dogPhoto2 {
+    display: none;
+  }
+}

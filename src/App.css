@@ -21,9 +21,9 @@ ul li a {
 }
 
 main {
-  height: 38rem;
-  padding-left: 4rem;
-  grid-area: 'main';
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0 auto;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -33,17 +33,57 @@ main::after {
 }
 
 .App {
+  min-height: 100%;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  flex: 1 1 360px;
 }
 
-@media (max-width: 440px) {
-  main {
-    padding-left: 0.4rem;
-  }
-  html {
-    max-width: 100%;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.text h1 {
+  margin: 0;
+  line-height: 3.4rem;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+.text h1 strong {
+  color: #2a02f0;
+}
+
+.normalText {
+  line-height: 2;
+  font-size: 1.2rem;
+  color: #777;
+}
+
+.textP {
+  color: #333;
+  margin: 1.6rem 0;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+.button {
+  margin-top: 2rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  background: #1d00bc;
+  border-radius: 70px 15px 15px 15px;
+  border: 3px ridge #0fb6d1;
+  padding: 2rem;
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .text h1 {
+    line-height: 2.8rem;
+    font-size: 1.8rem;
   }
 }

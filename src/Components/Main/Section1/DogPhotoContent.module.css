@@ -1,0 +1,10 @@
+.dogPhotoContent {
+  z-index: 99;
+  margin-left: 2rem;
+}
+
+@media (max-width: 768px) {
+  .dogPhotoContent {
+    top: 10rem;
+  }
+}

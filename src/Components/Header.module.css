@@ -45,11 +45,20 @@
   transform: scaleX(1);
 }
 
-.img {
+.img img {
   width: 192px;
   height: 192px;
   border-radius: 50%;
   background: #eff;
+}
+
+.name {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.8rem;
+  font-family: Roboto;
+  line-height: 0.5;
 }
 
 .hamPosition {
@@ -57,7 +66,7 @@
 }
 
 @media (max-width: 768px) {
-  .img {
+  .img img {
     width: 120px;
     height: 120px;
   }
@@ -71,7 +80,7 @@
     right: 2rem;
     margin-top: 0.8rem;
     cursor: pointer;
-    transition: all 0.4s linear;
+    transition: all 0.4s ease-in-out;
   }
 
   .navBurguerClosed {
