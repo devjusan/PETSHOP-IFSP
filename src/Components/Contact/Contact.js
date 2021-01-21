@@ -55,7 +55,7 @@ const Contato = () => {
 
   return (
     <>
-      <div className={styles.wave}>
+      <div>
         <svg
           height="600px"
           id="wave"
@@ -85,7 +85,7 @@ const Contato = () => {
       <div className={styles.section}>
         <div className={styles.container}>
           <form onSubmit={handleFormSubmit}>
-            <label htmlFor="email">E-mail*</label>
+            <label htmlFor="email">Seu E-mail*</label>
             <input
               required
               onChange={handleInputChange}

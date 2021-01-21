@@ -1,7 +1,7 @@
 .dogPhoto {
   position: absolute;
   top: -50px;
-  right: 0;
+  right: -150px;
   width: 950px;
   z-index: 800;
 }
@@ -10,7 +10,7 @@
   width: 100%;
 }
 
-@media (max-width: 1520px) {
+@media (max-width: 1220px) {
   .dogPhoto {
     display: none;
   }

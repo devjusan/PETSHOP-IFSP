@@ -6,22 +6,26 @@ import Header from './Components/Header';
 import Home from './Components/Main/Home';
 import Sobre from './Components/About/About';
 import NotFound from './Components/NotFound';
+import { Provider } from 'react-redux';
+import store from './store/configureStore';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="sobre" element={<Sobre />} />
-            <Route path="contato" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </main>
-        <Footer />
-      </BrowserRouter>
+      <Provider store={store}>
+        <BrowserRouter>
+          <Header />
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="sobre" element={<Sobre />} />
+              <Route path="contato" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </main>
+          <Footer />
+        </BrowserRouter>
+      </Provider>
     </div>
   );
 }

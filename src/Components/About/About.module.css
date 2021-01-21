@@ -1,0 +1,42 @@
+.waves {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  transition: all 2s ease-out;
+
+  transform: rotate(180deg);
+}
+
+.wave1 {
+  animation: moveWave1 20s ease-in-out infinite alternate;
+}
+
+@keyframes moveWave1 {
+  from {
+    transform: translateX(-2000px);
+  }
+}
+
+.wave-2 {
+  animation: moveWave2 20s 10s ease-in-out infinite alternate;
+}
+
+@keyframes moveWave2 {
+  from {
+    transform: translateX(-1800px);
+  }
+}
+
+.wave3 {
+  animation: moveWave3 20s 7s ease-in-out infinite alternate;
+}
+
+@keyframes moveWave3 {
+  from {
+    transform: translateX(-1600px);
+  }
+}

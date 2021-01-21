@@ -2,10 +2,14 @@ import React from 'react';
 import styles from './Header.module.css';
 import { Link } from 'react-router-dom';
 import Dog from '../Assets/headerLogo.png';
+import { useDispatch, useSelector } from 'react-redux';
+import { close, open } from '../store/modal';
 
 const Header = () => {
-  const [burguer, setBurguer] = React.useState(false);
+  const mobileModal = useSelector((state) => state);
+  const dispatch = useDispatch();
 
+  console.log(mobileModal);
   return (
     <header className={styles.header}>
       <div className={styles.img}>
@@ -29,14 +33,14 @@ const Header = () => {
       </nav>
 
       <div className={styles.hamPosition}>
-        {burguer ? (
+        {mobileModal ? (
           <div
-            onClick={() => setBurguer(false)}
+            onClick={() => dispatch(open())}
             className={styles.navBurguerClosed}
           />
         ) : (
           <div
-            onClick={() => setBurguer(true)}
+            onClick={() => dispatch(close())}
             className={`${styles.navOpened}`}
           >
             <nav className={styles.navStyle}>
