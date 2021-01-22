@@ -6,9 +6,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { close, open } from '../store/modal';
 
 const Header = () => {
-  const mobileModal = useSelector((state) => state);
+  const mobileModal = useSelector((state) => state.modal);
   const dispatch = useDispatch();
-
   console.log(mobileModal);
   return (
     <header className={styles.header}>
@@ -24,7 +23,7 @@ const Header = () => {
             <Link to="/">HOME</Link>
           </li>
           <li>
-            <Link to="/sobre">SOBRE NÓS</Link>
+            <Link to="/sobre">QUEM SOMOS</Link>
           </li>
           <li>
             <Link to="/contato">CONTATO</Link>

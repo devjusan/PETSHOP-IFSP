@@ -1,8 +1,90 @@
+.section {
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 8rem;
+  background-color: white;
+}
+
+.divText {
+  margin: 3rem 0 1rem 0;
+}
+
+.history {
+  max-width: 960px;
+}
+
+.history p:first-of-type {
+  margin-top: 3rem;
+}
+
+.history p {
+  line-height: 1.3;
+  color: #333;
+}
+
+.niceDisplay {
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.07);
+  border-radius: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  z-index: 2;
+  padding-bottom: calc((1 / 16) * 100%);
+}
+
+.div2 img,
+.div3 img,
+.div4 img {
+  width: 260px;
+  height: 170px;
+  border-radius: 45px;
+  margin-bottom: 1.5rem;
+}
+
+.div1 img {
+  width: 100%;
+  height: 100%;
+  border-radius: 45px;
+}
+
+.div1 {
+  margin-top: 10rem;
+  width: 285px;
+  height: 427px;
+}
+
+.div2 {
+  display: block;
+
+  flex: 1;
+  margin-top: 7rem;
+}
+
+.div3 {
+  display: block;
+  flex: 1;
+  margin-top: 4rem;
+}
+
+.div4 {
+  display: block;
+
+  flex: 1;
+}
+
+.div2,
+.div3,
+.div4 {
+  min-width: 285px;
+  min-height: 190px;
+}
+
 .waves {
   opacity: 0;
   position: absolute;
   z-index: -1;
-  top: 0;
+  top: -4.3rem;
   left: 0;
   right: 0;
   width: 100vw;
@@ -12,7 +94,7 @@
 }
 
 .wave1 {
-  animation: moveWave1 20s ease-in-out infinite alternate;
+  animation: moveWave1 10s ease-in-out infinite alternate;
 }
 
 @keyframes moveWave1 {
@@ -38,5 +120,39 @@
 @keyframes moveWave3 {
   from {
     transform: translateX(-1600px);
+  }
+}
+
+@media (max-width: 767px) {
+  .div2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 200px;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .div3 {
+    display: flex;
+    flex-wrap: wrap;
+
+    flex-direction: row;
+    justify-content: center;
+    width: 200px;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .div4 {
+    display: flex;
+    flex-wrap: wrap;
+
+    flex-direction: row;
+    justify-content: center;
+    width: 200px;
+    gap: 1rem;
+    margin-top: 1rem;
   }
 }

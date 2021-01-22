@@ -1,5 +1,12 @@
 import React from 'react';
 import styles from './About.module.css';
+import f1 from '../../Assets/f1.jpg';
+import f2 from '../../Assets/f2.jpg';
+import f3 from '../../Assets/f3.jpg';
+import f4 from '../../Assets/f4.jpg';
+import f5 from '../../Assets/f5.jpg';
+import f6 from '../../Assets/f6.jpg';
+import f7 from '../../Assets/f7.jpg';
 
 const Sobre = () => {
   React.useEffect(() => {
@@ -18,7 +25,7 @@ const Sobre = () => {
     scrollToTop();
   }, []);
   return (
-    <div className={styles.about}>
+    <div>
       <div>
         <svg
           height="600px"
@@ -46,6 +53,61 @@ const Sobre = () => {
           />
         </svg>
       </div>
+      <section className={styles.section}>
+        <div className={`${styles.history} text`}>
+          <h1>
+            <strong>O lugar ideal</strong> para o seu cão{' '}
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            dictum ante et lacus pulvinar convallis
+          </p>
+          <p>
+            Curabitur dapibus arcu at erat consequat, vitae placerat velit
+            vulputate. Aenean eget lectus dui. Etiam nisl urna, ullamcorper
+            vestibulum est volutpat, tempor varius justo.
+          </p>
+          <p>
+            Cras ac varius libero. Aenean a dapibus augue, id consectetur risus.
+            Vestibulum quis diam elementum, maximus metus ut, tempor nibh.
+          </p>
+        </div>
+        <div className={`${styles.divText} text`}>
+          <h1>Veja algumas fotos</h1>
+        </div>
+
+        <div className={`${styles.niceDisplay}`}>
+          <div className={styles.div1}>
+            <img src={f1} alt="Foto 1" />
+          </div>
+          <div className={styles.div2}>
+            <div>
+              <img src={f2} alt="Foto 2" />
+            </div>
+            <div>
+              <img src={f3} alt="Foto 3" />
+            </div>
+          </div>
+
+          <div className={styles.div3}>
+            <div>
+              <img src={f4} alt="Foto 4" />
+            </div>
+            <div>
+              <img src={f5} alt="Foto 5" />
+            </div>
+          </div>
+
+          <div className={styles.div4}>
+            <div>
+              <img src={f6} alt="Foto 6" />
+            </div>
+            <div>
+              <img src={f7} alt="Foto 7" />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
