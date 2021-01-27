@@ -69,6 +69,8 @@ a {
 
 .button {
   margin-top: 2rem;
+  max-width: 300px;
+  max-height: 100px;
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
@@ -81,9 +83,35 @@ a {
   transition: all 0.2s ease;
 }
 
+.button:hover {
+  background: darkblue;
+}
+
+[data-anime] {
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+[data-anime='left'] {
+  transform: translate3d(-100px, 0, 0);
+}
+
+[data-anime='right'] {
+  transform: translate3d(100px, 0, 0);
+}
+
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+
 @media (max-width: 768px) {
   .text h1 {
     line-height: 2.8rem;
     font-size: 1.8rem;
+  }
+
+  .text {
+    text-align: center;
   }
 }

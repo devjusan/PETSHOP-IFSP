@@ -1,16 +1,23 @@
 import React from 'react';
 import styles from './Header.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Dog from '../Assets/headerLogo.png';
 import { useDispatch, useSelector } from 'react-redux';
 import { close, open } from '../store/modal';
 
 const Header = () => {
+  let { pathname } = useLocation();
+  console.log(pathname);
+
   const mobileModal = useSelector((state) => state.modal);
   const dispatch = useDispatch();
-  console.log(mobileModal);
   return (
     <header className={styles.header}>
+      {pathname === '/' ? (
+        <div className={styles.bubblePosition}>
+          <figure className={styles.bubble}></figure>
+        </div>
+      ) : null}
       <div className={styles.img}>
         <a href="/">
           <img src={Dog} alt="Imagem no cabeçalho." />

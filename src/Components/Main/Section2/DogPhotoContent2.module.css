@@ -1,12 +1,11 @@
 .dogContent2 {
-  margin-left: 2rem;
+  margin: 0rem 3rem;
   max-width: 400px;
 }
 
 @media (max-width: 500px) {
   .dogContent2 {
-    margin-left: 1rem;
-
+    margin: 0rem 1rem;
     max-width: 300px;
   }
 }

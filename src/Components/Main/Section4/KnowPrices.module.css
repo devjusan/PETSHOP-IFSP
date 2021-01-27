@@ -1,5 +1,9 @@
 .section {
-  margin: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: calc((1 / 16) * 100%);
 }
 
 .tables {
@@ -29,10 +33,6 @@
 .separator {
   border-color: #aaa;
   box-sizing: border-box;
-}
-
-.button:hover {
-  background: darkblue;
 }
 
 @media (max-width: 600px) {

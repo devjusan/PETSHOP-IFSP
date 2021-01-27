@@ -52,9 +52,9 @@ const KnowPrices = () => {
             </ul>
           </div>
         </div>
-        <Link className="button" to="/contato">
-          Faça um orçamento
-        </Link>
+      </div>
+      <div className={`button`}>
+        <Link to="/contato">Faça um orçamento</Link>
       </div>
     </section>
   );

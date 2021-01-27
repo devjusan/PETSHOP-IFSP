@@ -6,11 +6,13 @@
 }
 
 .divText {
+  position: absolute;
   margin: 3rem 0 1rem 0;
 }
 
 .history {
   max-width: 960px;
+  margin-bottom: 2rem;
 }
 
 .history p:first-of-type {
@@ -25,10 +27,11 @@
 .niceDisplay {
   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.07);
   border-radius: 40px;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 1rem;
+  justify-content: center;
   z-index: 2;
   padding-bottom: calc((1 / 16) * 100%);
 }
@@ -39,7 +42,7 @@
   width: 260px;
   height: 170px;
   border-radius: 45px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .div1 img {
@@ -56,28 +59,17 @@
 
 .div2 {
   display: block;
-
-  flex: 1;
   margin-top: 7rem;
 }
 
 .div3 {
   display: block;
-  flex: 1;
   margin-top: 4rem;
 }
 
 .div4 {
   display: block;
-
-  flex: 1;
-}
-
-.div2,
-.div3,
-.div4 {
-  min-width: 285px;
-  min-height: 190px;
+  margin-top: 1rem;
 }
 
 .waves {
@@ -94,7 +86,7 @@
 }
 
 .wave1 {
-  animation: moveWave1 10s ease-in-out infinite alternate;
+  animation: moveWave1 8s ease-in-out infinite alternate;
 }
 
 @keyframes moveWave1 {

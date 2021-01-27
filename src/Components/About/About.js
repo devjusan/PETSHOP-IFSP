@@ -9,6 +9,48 @@ import f6 from '../../Assets/f6.jpg';
 import f7 from '../../Assets/f7.jpg';
 
 const Sobre = () => {
+  let target = document.querySelectorAll('[data-anime]');
+  const debounce = function (func, wait, immediate) {
+    var timeout;
+    return function () {
+      var context = this,
+        args = arguments;
+      var later = function () {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
+
+  React.useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    target = document.querySelectorAll('[data-anime]');
+  }, []);
+
+  const animationClass = 'animate';
+
+  const animeIt = debounce(function animeScroll() {
+    const windowTop = window.pageYOffset + window.innerHeight * 0.75;
+    target.forEach(function (element) {
+      console.log('oi');
+      if (windowTop > element.offsetTop) {
+        element.classList.add(animationClass);
+      } else {
+        element.classList.remove(animationClass);
+      }
+    });
+  }, 150);
+
+  animeIt();
+
+  window.addEventListener('scroll', function () {
+    animeIt();
+  });
+
   React.useEffect(() => {
     const wave = document.getElementById('wave');
     function waveEffect() {
@@ -26,6 +68,7 @@ const Sobre = () => {
   }, []);
   return (
     <div>
+      {/* ONDAS*/}
       <div>
         <svg
           height="600px"
@@ -76,11 +119,13 @@ const Sobre = () => {
           <h1>Veja algumas fotos</h1>
         </div>
 
+        <div className={styles.aboutUs}>Teste</div>
+
         <div className={`${styles.niceDisplay}`}>
-          <div className={styles.div1}>
+          <div data-anime="left" className={styles.div1}>
             <img src={f1} alt="Foto 1" />
           </div>
-          <div className={styles.div2}>
+          <div data-anime="left" className={styles.div2}>
             <div>
               <img src={f2} alt="Foto 2" />
             </div>
@@ -89,7 +134,7 @@ const Sobre = () => {
             </div>
           </div>
 
-          <div className={styles.div3}>
+          <div data-anime="right" className={styles.div3}>
             <div>
               <img src={f4} alt="Foto 4" />
             </div>
@@ -98,7 +143,7 @@ const Sobre = () => {
             </div>
           </div>
 
-          <div className={styles.div4}>
+          <div data-anime="right" className={styles.div4}>
             <div>
               <img src={f6} alt="Foto 6" />
             </div>

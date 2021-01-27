@@ -1,8 +1,70 @@
 .header {
   display: flex;
+  position: relative;
   padding: 1.1rem;
   z-index: 1001;
   padding-left: 4rem;
+}
+
+.bubblePosition {
+  position: absolute;
+  animation: bubble-anim 15s ease-in-out infinite alternate;
+}
+
+.bubble {
+  display: block;
+  position: relative;
+  margin: 0;
+  width: 200px;
+  height: 200px;
+  left: 180%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 100px 100px, #0f92f0, #0e99e0);
+  top: 0;
+}
+
+@keyframes bubble-anim {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scaleY(0.95) scaleX(1.05);
+    top: 20px;
+  }
+  48% {
+    transform: scaleY(1.1) scaleX(0.9);
+    top: 40px;
+  }
+  68% {
+    transform: scaleY(0.98) scaleX(1.02);
+    top: 50px;
+  }
+  80% {
+    transform: scaleY(1.02) scaleX(0.98);
+    top: 60px;
+  }
+  97%,
+  100% {
+    transform: scale(1);
+    top: 70px;
+  }
+}
+
+.bubble:before {
+  content: '';
+  position: absolute;
+  top: 1%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 0px,
+    #ffffff,
+    rgba(255, 255, 255, 0) 58%
+  );
+  filter: blur(5px);
+  z-index: 2;
 }
 
 .nav {
@@ -37,7 +99,7 @@
   height: 3px;
   transform-origin: left;
   transform: scaleX(0);
-  transition: all 0.2s ease-out;
+  transition: all 0.2s ease;
   background-color: #2a02f0;
 }
 
@@ -66,6 +128,11 @@
 }
 
 @media (max-width: 768px) {
+  .bubble {
+    width: 100px;
+    height: 100px;
+    left: 180%;
+  }
   .img img {
     width: 120px;
     height: 120px;
@@ -80,7 +147,7 @@
     right: 2rem;
     margin-top: 0.8rem;
     cursor: pointer;
-    transition: all 0.4s ease-in-out;
+    transition: 0.4s;
   }
 
   .navBurguerClosed {
@@ -88,7 +155,7 @@
     width: 35px;
     height: 5px;
     background-color: #333;
-    transition: all 0.4s ease-out;
+    transition: 0.4s;
   }
   .navBurguerClosed::before {
     content: '';
