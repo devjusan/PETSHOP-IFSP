@@ -56,7 +56,9 @@ const Home = () => {
     <div className={styles.home}>
       <div className={`${styles.section1}`}>
         <DogPhoto />
-        <DogPhotoContent />
+        <div data-anime="left">
+          <DogPhotoContent />
+        </div>
       </div>
 
       <div className={`${styles.section2}`}>

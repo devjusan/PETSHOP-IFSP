@@ -1,18 +1,14 @@
 .section {
-  margin-left: 3rem;
-  margin-right: 3rem;
-  margin-top: 8rem;
-  background-color: white;
+  margin: 0 3rem;
+  margin-top: 2rem;
 }
 
-.divText {
-  position: absolute;
-  margin: 3rem 0 1rem 0;
-}
+/* texto de introdução */
 
 .history {
   max-width: 960px;
-  margin-bottom: 2rem;
+  font-size: 1.09rem;
+  margin-bottom: 5rem;
 }
 
 .history p:first-of-type {
@@ -24,14 +20,101 @@
   color: #333;
 }
 
+/* criadores do site fictício */
+
+.aboutUs {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: space-around;
+  padding: 3rem;
+  background: linear-gradient(to right top, #65dfc9, #32aac9);
+  border-radius: 20px;
+}
+
+.p1 .element,
+.p2 .element {
+  position: relative;
+  z-index: 2;
+  width: 150px;
+  height: 150px;
+}
+
+.p1,
+.p2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.25);
+  padding: 2.7rem;
+  border-radius: 20px;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.1)
+  );
+  backdrop-filter: blur(3rem);
+  margin-bottom: 30px;
+}
+
+.p1 .bg,
+.p2 .bg {
+  position: absolute;
+  z-index: -5;
+  width: 180px;
+  height: 180px;
+  right: 0;
+  bottom: 0;
+}
+
+.text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+}
+
+.text p {
+  font-family: 'Atma', sans-serif;
+  text-align: center;
+  font-weight: 500;
+  color: #333;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  position: absolute;
+}
+
+.text h3 {
+  position: absolute;
+  font-family: 'Atma', sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  z-index: 5;
+  top: -35px;
+}
+
+.p1 div img,
+.p2 div img {
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+}
+
+/* arrumação elegante das fotos dos cachorros */
+
 .niceDisplay {
   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.07);
   border-radius: 40px;
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  margin-top: 5rem;
+  gap: 2rem;
   justify-content: center;
+  align-content: center;
   z-index: 2;
   padding-bottom: calc((1 / 16) * 100%);
 }
@@ -58,20 +141,23 @@
 }
 
 .div2 {
-  display: block;
   margin-top: 7rem;
 }
 
 .div3 {
-  display: block;
   margin-top: 4rem;
 }
 
 .div4 {
-  display: block;
   margin-top: 1rem;
 }
 
+.divText {
+  position: absolute;
+  margin: 8rem 0 0 2rem;
+}
+
+/* ondas do site*/
 .waves {
   opacity: 0;
   position: absolute;
@@ -81,7 +167,6 @@
   right: 0;
   width: 100vw;
   transition: all 2s ease-out;
-
   transform: rotate(180deg);
 }
 
@@ -117,34 +202,15 @@
 
 @media (max-width: 767px) {
   .div2 {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    width: 200px;
-    gap: 1rem;
     margin-top: 1rem;
   }
 
   .div3 {
-    display: flex;
-    flex-wrap: wrap;
-
-    flex-direction: row;
-    justify-content: center;
-    width: 200px;
-    gap: 1rem;
     margin-top: 1rem;
   }
 
-  .div4 {
-    display: flex;
-    flex-wrap: wrap;
-
-    flex-direction: row;
-    justify-content: center;
-    width: 200px;
-    gap: 1rem;
-    margin-top: 1rem;
+  .section {
+    margin: 0 auto;
+    transform: scale(0.9);
   }
 }

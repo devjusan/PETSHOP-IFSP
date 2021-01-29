@@ -7,9 +7,12 @@ import f4 from '../../Assets/f4.jpg';
 import f5 from '../../Assets/f5.jpg';
 import f6 from '../../Assets/f6.jpg';
 import f7 from '../../Assets/f7.jpg';
+import p1 from '../../Assets/p1.jpg';
+import p2 from '../../Assets/p2.jpeg';
+import bg from '../../Assets/bg.svg';
 
 const Sobre = () => {
-  let target = document.querySelectorAll('[data-anime]');
+  // função para ganhar performance com o evento no scroll
   const debounce = function (func, wait, immediate) {
     var timeout;
     return function () {
@@ -26,16 +29,18 @@ const Sobre = () => {
     };
   };
 
+  let target1 = document.querySelectorAll('[data-anime]');
+
   React.useEffect(() => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    target = document.querySelectorAll('[data-anime]');
+    target1 = document.querySelectorAll('[data-anime]');
   }, []);
 
   const animationClass = 'animate';
 
   const animeIt = debounce(function animeScroll() {
     const windowTop = window.pageYOffset + window.innerHeight * 0.75;
-    target.forEach(function (element) {
+    target1.forEach(function (element) {
       console.log('oi');
       if (windowTop > element.offsetTop) {
         element.classList.add(animationClass);
@@ -103,7 +108,9 @@ const Sobre = () => {
           </h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            dictum ante et lacus pulvinar convallis
+            dictum ante et lacus pulvinar convallis. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Aliquam dictum ante et lacus pulvinar
+            convallis
           </p>
           <p>
             Curabitur dapibus arcu at erat consequat, vitae placerat velit
@@ -112,20 +119,58 @@ const Sobre = () => {
           </p>
           <p>
             Cras ac varius libero. Aenean a dapibus augue, id consectetur risus.
-            Vestibulum quis diam elementum, maximus metus ut, tempor nibh.
+            Vestibulum quis diam elementum, maximus metus ut, tempor nibh. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum
+            ante et lacus pulvinar convallis
+          </p>
+          <p>
+            Cras ac varius libero. Aenean a dapibus augue, id consectetur risus.
+            Vestibulum quis diam elementum, maximus metus ut, tempor nibh. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum
+            ante et lacus pulvinar convallis
           </p>
         </div>
-        <div className={`${styles.divText} text`}>
+
+        <div data-anime="right" className={styles.aboutUs}>
+          <div className={styles.p2}>
+            <div className={styles.element}>
+              <img className={styles.bg} src={bg} alt="Foto do fundo" />
+              <img src={p2} alt="Foto 2" />
+            </div>
+            <div className={styles.text}>
+              <h3>CEO & Fundador</h3>
+              <p>
+                Estudante de Análise e Desenvolvimento de sistemas na IFSP,
+                Valmir Santos é fundador IFSPet Lorem ipsum dolor sit amet,
+                consectetur.
+              </p>
+            </div>
+          </div>
+          <div className={styles.p1}>
+            <div className={styles.element}>
+              <img className={styles.bg} src={bg} alt="Foto do fundo" />
+              <img src={p1} alt="Foto 1" />
+            </div>
+            <div className={styles.text}>
+              <h3>Estagiário</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                dictum ante et lacus pulvinar convallis urabitur dapibus arcu
+                at.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div data-anime="right" className={`${styles.divText} text`}>
           <h1>Veja algumas fotos</h1>
         </div>
 
-        <div className={styles.aboutUs}>Teste</div>
-
-        <div className={`${styles.niceDisplay}`}>
-          <div data-anime="left" className={styles.div1}>
+        <div data-anime="left" className={`${styles.niceDisplay}`}>
+          <div className={styles.div1}>
             <img src={f1} alt="Foto 1" />
           </div>
-          <div data-anime="left" className={styles.div2}>
+          <div className={styles.div2}>
             <div>
               <img src={f2} alt="Foto 2" />
             </div>
@@ -134,7 +179,7 @@ const Sobre = () => {
             </div>
           </div>
 
-          <div data-anime="right" className={styles.div3}>
+          <div className={styles.div3}>
             <div>
               <img src={f4} alt="Foto 4" />
             </div>
@@ -143,7 +188,7 @@ const Sobre = () => {
             </div>
           </div>
 
-          <div data-anime="right" className={styles.div4}>
+          <div className={styles.div4}>
             <div>
               <img src={f6} alt="Foto 6" />
             </div>

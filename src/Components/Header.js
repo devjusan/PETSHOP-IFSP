@@ -14,8 +14,8 @@ const Header = () => {
   return (
     <header className={styles.header}>
       {pathname === '/' ? (
-        <div className={styles.bubblePosition}>
-          <figure className={styles.bubble}></figure>
+        <div className={`${styles.stage}`}>
+          <figure className={`${styles.ball} ${styles.bubble}`}></figure>
         </div>
       ) : null}
       <div className={styles.img}>
