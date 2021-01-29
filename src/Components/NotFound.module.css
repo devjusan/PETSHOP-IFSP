@@ -1,0 +1,20 @@
+.notFound {
+  padding: 2rem 3rem;
+  margin: 2rem;
+  font-size: 1.1rem;
+  font-family: 'Atma', cursive;
+  font-weight: 600;
+  color: #9f6000;
+  background-color: #feefb3;
+  max-width: 400px;
+  border-radius: 20px;
+}
+
+.buttonNf {
+  width: 200px;
+  font-size: 1.2rem;
+  font-family: 'Atma', cursive;
+  text-align: center;
+  height: 80px;
+  margin: 1.8rem 2rem;
+}

@@ -116,7 +116,7 @@
   justify-content: center;
   align-content: center;
   z-index: 2;
-  padding-bottom: calc((1 / 16) * 100%);
+  padding: 0 0 3rem 0;
 }
 
 .div2 img,
@@ -200,7 +200,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 956px) {
   .div2 {
     margin-top: 1rem;
   }

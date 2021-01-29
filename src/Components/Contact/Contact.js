@@ -3,6 +3,9 @@ import styles from './Contact.module.css';
 import axios from 'axios';
 
 const Contato = () => {
+  const [error, setError] = React.useState(null);
+  const [show, setShow] = React.useState(false);
+
   React.useEffect(() => {
     const wave = document.getElementById('wave');
     function waveEffect() {
@@ -44,7 +47,9 @@ const Contato = () => {
       })
       .then((response) => {
         console.log(response.data);
-      });
+      })
+      .catch((e) => setError(e));
+    setShow(true);
   }
 
   function handleFormSubmit(event) {
@@ -124,6 +129,28 @@ const Contato = () => {
             />
 
             <input type="submit" value="Enviar" />
+            {show &&
+              (error ? (
+                <p
+                  style={{
+                    fontSize: '0.9rem',
+                    color: '#D8000C',
+                    backgroundColor: '#FFD2D2',
+                  }}
+                >
+                  Ocorreu um erro no envio.
+                </p>
+              ) : (
+                <p
+                  style={{
+                    fontSize: '0.9rem',
+                    color: '#4F8A10',
+                    backgroundColor: '#DFF2BF',
+                  }}
+                >
+                  Enviado com sucesso..
+                </p>
+              ))}
           </form>
         </div>
         <div className={`${styles.content} text`}>

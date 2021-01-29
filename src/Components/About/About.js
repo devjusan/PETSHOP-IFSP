@@ -138,7 +138,7 @@ const Sobre = () => {
               <img src={p2} alt="Foto 2" />
             </div>
             <div className={styles.text}>
-              <h3>CEO & Fundador</h3>
+              <h3>CEO e Cofundador</h3>
               <p>
                 Estudante de Análise e Desenvolvimento de sistemas na IFSP,
                 Valmir Santos é fundador IFSPet Lorem ipsum dolor sit amet,
