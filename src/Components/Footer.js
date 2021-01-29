@@ -39,9 +39,7 @@ const Footer = () => {
           </nav>
         </div>
       </div>
-      <p className={styles.dev}>
-        Desenvolvido por @devjusan & @gregoryguimaraes
-      </p>
+      <p className={styles.dev}>Desenvolvido por @devjusan</p>
     </footer>
   );
 };
